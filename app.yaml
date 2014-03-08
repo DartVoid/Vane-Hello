@@ -7,7 +7,7 @@ dart2js: false
 handlers:
 - url: /hello
   match: exact 
-  script: helloWorld.dart
+  script: hello_world.dart
   controller: HelloWorld
 
 # Static content  
