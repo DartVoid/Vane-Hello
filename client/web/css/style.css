@@ -4,10 +4,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, p {
-  color: #333;
-}
-
 .content {
   margin-left: auto;
   margin-right: auto;
@@ -22,8 +18,7 @@ h1, p {
 
 .well {
   background-color: #fff;
-  padding: 0px 10px 10px 10px;
-  
+  padding: 1em;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
