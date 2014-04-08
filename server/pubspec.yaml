@@ -1,8 +1,4 @@
 name: HelloWorldVane
 description: A sample web application
 dependencies:
-  vane:
-    git:
-      ref: master
-      url: git@bitbucket.org:dartvoid/vane.git
-
+  vane: any

@@ -4,16 +4,30 @@
   <head>
     <meta charset="utf-8">
     <title>Vane - Hello World</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Vane - Hello World</h1>
-    <form>
-      <input id="form-input" type="text" name="message">
-      <input id="form-submit" type="submit">
-      <button id="form-clear">Clear</button>
-    </form>
-    <div id="form-response"></div>
+  
+    <div class="pure-g-r content content-offset">
+      <div class="pure-u-1-1 well">
+        <form class="pure-form">
+          <fieldset>
+            <legend class="form-legend">Vane - Hello World</legend>
+            <input id="form-input" type="text" placeholder="Message">
+            <button id="form-submit" class="pure-button pure-button-primary" type="submit">Submit</button>
+            <input id="form-clear" class="pure-button pure-button-primary" type="reset"> 
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    
+    <div class="pure-g-r content content-offset">
+      <div id="response-wrapper" class="pure-u-1-1">
+        <div id="response"></div>
+      </div>
+    </div>
+    
     <script type="application/dart" src="main.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>
