@@ -4,7 +4,7 @@ void main() {
   InputElement formInput    = querySelector("#form-input");
   ButtonElement formSubmit  = querySelector("#form-submit");
   InputElement formClear    = querySelector("#form-clear");
-  DivElement respWrap       = querySelector("#response");
+  DivElement respWrap       = querySelector("#response-wrapper");
   DivElement formResp       = querySelector("#response");
 
   formSubmit.onClick.listen((e) {
