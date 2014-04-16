@@ -2,7 +2,7 @@ application: Hello World Vane
 version: 1
 deploy: true
 pub: true
-dart2js: false 
+dart2js: true 
 
 handlers:
 - url: /hello
