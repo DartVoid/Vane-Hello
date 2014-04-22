@@ -8,7 +8,7 @@ handlers:
 - url: /hello
   match: exact 
   script: hello_world.dart
-  controller: HelloWorld
+  handler: HelloWorld
 
 # Static content  
 - url: /
