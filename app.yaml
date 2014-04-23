@@ -10,7 +10,7 @@ handlers:
   script: hello_world.dart
   handler: HelloWorld
 
-# Static content  
+# Static content, will be served by your app's Nginx instance 
 - url: /
   match: postregex
   static_dir: web
