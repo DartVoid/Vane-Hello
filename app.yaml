@@ -6,13 +6,16 @@ dart2js: true
 
 handlers:
 - url: /hello
-  match: exact 
-  script: hello_world.dart
-  handler: HelloWorld
+  handler: hello_world.dart:HelloWorld
 
 # Static content, will be served by your app's Nginx instance 
 - url: /
   match: postregex
   static_dir: web
 
+
+# Equivalent longer config for the Dart handler above  
+#- url: /hello
+#  script: hello_world.dart
+#  handler: HelloWorld
 
