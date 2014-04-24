@@ -4,11 +4,11 @@ import 'package:vane/vane.dart';
 class HelloWorld extends Vane {
   Future main() {
     if(query.containsKey("name")) {
-      log.info("Greeting ${query["name"]}");
-      close("Greetings ${query["name"]}");
+      log.info("Saying hello to ${query["name"]}");
+      close("Hello ${query["name"]}");
     } else {
-      log.info("Greeting the world");
-      close("Greetings World!");  
+      log.info("Saying hello to the world");
+      close("Hello World!");  
     }
     
     return end;
