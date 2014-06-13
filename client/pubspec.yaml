@@ -1,4 +1,4 @@
-name: HelloWorldVane
-description: A sample web application
+name: client
+description: A simple application client
 dependencies:
-  browser: any
+  browser: '>=0.10.0+1 <0.11.0'
