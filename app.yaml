@@ -1,22 +1,21 @@
-application: Hello World Vane
-version: 1
-deploy: true
-pub: true
-dart2js: true 
+name: Vane-Hello-World
+framework: vane
 
 handlers:
+# Hello backend service using the shorthand syntax
 - url: /hello
+  match: regex
   handler: hello_world.dart:HelloWorld
 
-# Static content, will be served by your app's Nginx instance 
+# Equivalent alternative to the above config  
+#- url: /hello
+#  match: regex
+#  script: hello_world.dart
+#  handler: HelloWorld
+
+# Static content served by Nginx
 - url: /
   match: postregex
   static_dir: web
-
-
-# Equivalent longer config for the Dart handler above  
-#- url: /hello
-#  script: hello_world.dart
-#  handler: HelloWorld
 
 
