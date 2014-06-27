@@ -1,21 +1,13 @@
 name: Vane-Hello-World
-framework: vane
 
-handlers:
-# Hello backend service using the shorthand syntax
+server:
+# Hello backend
 - url: /hello
   match: regex
-  handler: hello_world.dart:HelloWorld
 
-# Equivalent alternative to the above config  
-#- url: /hello
-#  match: regex
-#  script: hello_world.dart
-#  handler: HelloWorld
-
-# Static content served by Nginx
+client:
+# Serve static content
 - url: /
   match: postregex
-  static_dir: web
-
+  dir: web
 
