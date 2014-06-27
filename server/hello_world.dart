@@ -1,16 +1,15 @@
-import 'dart:async';
-import 'package:vane/vane.dart';
+part of server;
 
 class HelloWorld extends Vane {
-  Future main() {
-    if(query.containsKey("msg")) {
-      log.info("Saying hello to ${query["msg"]}");
-      close("Hello ${query["msg"]}");
-    } else {
-      log.info("Saying hello to the world");
-      close("Hello World!");  
-    }
-    
+  // Register the application pipeline with a simple logging middleware
+  var pipeline = [Log, This];
+
+  // Define application routes
+  @Route("/hello")
+  @Route("/hello/{msg}")
+  Future hello(String msg) {
+    // Respond with a message
+    close("Hello ${msg != "" ? msg : "World"}!");
     return end;
   }
 }
