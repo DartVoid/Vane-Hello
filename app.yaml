@@ -1,0 +1,13 @@
+name: Vane-Hello-World
+
+server:
+# Hello backend
+- url: /hello
+  match: regex
+
+client:
+# Serve static content
+- url: /
+  match: postregex
+  dir: web
+
