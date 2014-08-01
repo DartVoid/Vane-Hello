@@ -1,11 +1,16 @@
-library server;
-
 import 'dart:async';
 import 'package:vane/vane.dart';
 
-// Import Vane controller
-part 'hello_world.dart';
+@Route("/hello")
+class HelloWorld extends Vane {
+  var pipeline = [Log, This];
 
-// Start server
+  @Route("")
+  @Route("/{message}")
+  Future hello(String message) {
+    return close("Hello ${message != "" ? message : "World"}!");
+  }
+}
+
 void main() => serve();
 
