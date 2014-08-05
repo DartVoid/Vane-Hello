@@ -13,10 +13,18 @@ packages:
     description: crypto
     source: hosted
     version: "0.9.0"
+  http:
+    description: http
+    source: hosted
+    version: "0.11.1+1"
+  http_parser:
+    description: http_parser
+    source: hosted
+    version: "0.0.2+4"
   http_server:
     description: http_server
     source: hosted
-    version: "0.9.2+1"
+    version: "0.9.3"
   logging:
     description: logging
     source: hosted
@@ -49,10 +57,26 @@ packages:
     description: quiver
     source: hosted
     version: "0.18.2"
+  shelf:
+    description: shelf
+    source: hosted
+    version: "0.5.4+2"
+  shelf_proxy:
+    description: shelf_proxy
+    source: hosted
+    version: "0.1.0+1"
+  source_span:
+    description: source_span
+    source: hosted
+    version: "1.0.0"
   stack_trace:
     description: stack_trace
     source: hosted
     version: "1.0.2"
+  string_scanner:
+    description: string_scanner
+    source: hosted
+    version: "0.1.0"
   unittest:
     description: unittest
     source: hosted
@@ -68,4 +92,8 @@ packages:
   vane:
     description: vane
     source: hosted
-    version: "0.5.0+2"
+    version: "0.6.1"
+  yaml:
+    description: yaml
+    source: hosted
+    version: "2.0.0"
