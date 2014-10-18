@@ -16,10 +16,10 @@ void main() {
     Uri url = Uri.parse("/hello/${formInput.value}"); // Construct the request url
     
     // Send request
-    client.put(url).asStream().listen((response) {
+    client.put(Uri.encodeFull(url.toString()), encoding: UTF8).asStream().listen((response) {
       // Display response message
       formResponse.append(
-        new ParagraphElement()..text = "${UTF8.decode(response.body.codeUnits)}"
+        new ParagraphElement()..text = "${Uri.decodeFull(response.body)}"
       ); 
       // Catch errors
     }).onError((e) {
