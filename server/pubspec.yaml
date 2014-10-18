@@ -1,5 +1,4 @@
 name: server
 description: A simple Vane server
 dependencies:
-  vane: '>=0.6.0 <0.7.0'
-
+  vane: '>=0.6.5 <0.7.0'
