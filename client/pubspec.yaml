@@ -1,5 +1,6 @@
 name: client
 description: A simple application client
 dependencies:
+  http: '>=0.11.1+1 <0.12.0'
   browser: '>=0.10.0+2 <0.11.0'
-
+  
