@@ -1,5 +1,4 @@
 import 'dart:html';
-import 'dart:convert' show UTF8;
 import 'package:http/browser_client.dart';
 
 void main() {
@@ -18,13 +17,13 @@ void main() {
     // standard port 80 for production)
     Uri uri = Uri.parse(window.location.href);
     var port = uri.port != 8080 ? 80 : 9090;
-    Uri url = Uri.parse("http://${uri.host}:${port}/hello/${formInput.value}");
+    Uri url = Uri.parse("http://${uri.host}:${port}/hello/${Uri.encodeQueryComponent(formInput.value)}");
 
     // Send request
-    client.put(Uri.encodeFull(url.toString()), encoding: UTF8).asStream().listen((response) {
+    client.put(url).asStream().listen((response) {
       // Display response message
       formResponse.append(
-        new ParagraphElement()..text = "${Uri.decodeFull(response.body)}"
+        new ParagraphElement()..text = "${Uri.decodeQueryComponent(response.body)}"
       );
       // Catch errors
     }).onError((e) {
