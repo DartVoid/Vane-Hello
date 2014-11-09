@@ -3,7 +3,7 @@ import 'package:vane/vane.dart';
 
 @Route("/hello")
 class HelloWorld extends Vane {
-  var pipeline = [Log, This];
+  var pipeline = [Log, Cors, This];
 
   @Route("")
   @Route("/{message}")
